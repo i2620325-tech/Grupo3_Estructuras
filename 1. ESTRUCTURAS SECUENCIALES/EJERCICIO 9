@@ -1,0 +1,18 @@
+#EJERCICIO 9
+
+PV: float
+descuento: float
+pago: float
+pfinal: float
+vuelto: float
+
+
+PV = float(input('Ingrese el precio de venta (S/.): '))
+descuento= float(input('Ingrese el descuento(%) : '))
+pago=float(input('Ingrese con cuanto realizará la compra (S/.): '))
+pfinal= PV*(100-descuento)/100
+vuelto = pago - pfinal
+
+
+print(f'El precio con descuento es: {pfinal:.1f}')
+print(f'Su cambio es: S/. {vuelto:.1f}')

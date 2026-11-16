@@ -1,0 +1,62 @@
+def leer_numeros(n):
+    """Función para que el usuario indique la entrada de N números."""
+    lista = []
+    print(f"\nPor favor, ingrese {n} números:")
+    for i in range(n):
+        while True:
+            try:
+                num = float(input(f"Número {i + 1}: "))
+                lista.append(num)
+                break
+            except ValueError:
+                print("Por favor, ingrese un valor numérico válido.")
+    return lista
+
+
+def encontrar_maximo_minimo(lista):
+    """Función que recorre la lista mediante estructuras repetitivas 
+       para determinar simultáneamente el máximo y el mínimo.
+    """
+    if not lista:
+        return None, None
+
+    # Inicializamos el máximo y el mínimo con el primer elemento del array
+    maximo = lista[0]
+    minimo = lista[0]
+
+    # Estructura repetitiva para evaluar cada elemento de la lista
+    for num in lista:
+        if num > maximo:
+            maximo = num
+        if num < minimo:
+            minimo = num
+
+    return maximo, minimo
+
+
+def main():
+    print("=== DETERMINAR MÁXIMO Y MÍNIMO DE UNA LISTA ===")
+    while True:
+        try:
+            n = int(input("Ingrese la cantidad de números (N): "))
+            if n > 0:
+                break
+            print("N debe ser un número entero mayor a 0.")
+        except ValueError:
+            print("Por favor, ingrese un número entero válido.")
+
+    # Llamada al procedimiento para obtener el array
+    numeros = leer_numeros(n)
+
+    # Llamada a la función para obtener simultáneamente el máximo y el mínimo
+    max_num, min_num = encontrar_maximo_minimo(numeros)
+
+    # Resultados
+    print("\n--- RESULTADOS ---")
+    print(f"Lista ingresada: {numeros}")
+    print(f"Número máximo: {max_num}")
+    print(f"Número mínimo: {min_num}")
+
+
+if __name__ == "__main__":
+    main()

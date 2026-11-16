@@ -1,0 +1,20 @@
+# 1. Entrada de datos
+inv1 = float(input("Ingrese la inversión de la persona 1: "))
+inv2 = float(input("Ingrese la inversión de la persona 2: "))
+inv3 = float(input("Ingrese la inversión de la persona 3: "))
+
+# 2. Calcular el total invertido
+total = inv1 + inv2 + inv3
+
+# 3. Calcular y mostrar porcentajes
+if total > 0:
+    porc1 = (inv1 / total) * 100
+    porc2 = (inv2 / total) * 100
+    porc3 = (inv3 / total) * 100
+
+    print(f"\nCapital total invertido: {total:.2f}")
+    print(f"• Persona 1: {porc1:.2f}%")
+    print(f"• Persona 2: {porc2:.2f}%")
+    print(f"• Persona 3: {porc3:.2f}%")
+else:
+    print("Error: La inversión total debe ser mayor a 0.")

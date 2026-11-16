@@ -1,0 +1,16 @@
+# 1. Entrada de datos
+horas = int(input("Ingrese las horas de uso: "))
+minutos = int(input("Ingrese los minutos de uso: "))
+
+# 2. Normalizar minutos a horas completas si son >= 60
+horas_totales = horas + (minutos // 60)
+minutos_restantes = minutos % 60
+
+# 3. Calcular el cobro
+tarifa_hora = 5.00
+tarifa_minuto = 0.10
+total_pagar = (horas_totales * tarifa_hora) + (minutos_restantes * tarifa_minuto)
+
+# 4. Mostrar resultado
+print(f"\nTiempo facturado: {horas_totales} hora(s) y {minutos_restantes} minuto(s)")
+print(f"Total a pagar: S/ {total_pagar:.2f}")

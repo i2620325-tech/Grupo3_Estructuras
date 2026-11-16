@@ -1,0 +1,58 @@
+#EJERCICIO 08
+cantidad: int = 0
+hombres: int = 0
+mujeres: int = 0
+edad: int = 0
+suma_hombres: int = 0
+suma_mujeres: int = 0
+promedio_hombres: float = 0.0
+promedio_mujeres: float = 0.0
+menor_edad: int = 0
+mayor_edad: int = 0
+sexo: str = ""
+
+cantidad = int(input("Ingrese la cantidad de asistentes: "))
+
+i:int = 1
+
+while i <= cantidad:
+
+    print("Persona", i)
+    edad = int(input("Ingrese la edad: "))
+    sexo = input("Ingrese el sexo (H/M): ").upper()
+
+    # CONTAR HOMBRES Y MUJERES
+    if sexo == "H":
+        hombres = hombres + 1
+        suma_hombres = suma_hombres + edad
+    else:
+        mujeres = mujeres + 1
+        suma_mujeres = suma_mujeres + edad
+
+    # DETERMINAR MENOR Y MAYOR EDAD
+    if i == 1:
+        menor_edad = edad
+        mayor_edad = edad
+    else:
+        if edad < menor_edad:
+            menor_edad = edad
+
+        if edad > mayor_edad:
+            mayor_edad = edad
+
+    i = i + 1
+
+# CALCULAR PROMEDIOS
+if hombres > 0:
+    promedio_hombres = suma_hombres / hombres
+
+if mujeres > 0:
+    promedio_mujeres = suma_mujeres / mujeres
+
+print(f'Cantidad de personas: {cantidad}')
+print(f'Cantidad de hombres: {hombres}')
+print(f'Cantidad de mujeres: {mujeres}')
+print(f'Promedio de edad de hombres: {promedio_hombres:.2f}')
+print(f'Promedio de edad de mujeres: {promedio_mujeres:.2f}')
+print(f'Menor edad: {menor_edad}')
+print(f'Mayor edad: {mayor_edad}')

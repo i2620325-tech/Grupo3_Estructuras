@@ -1,0 +1,17 @@
+#EJERCICIO 5
+
+capital: int
+interes: float
+tiempo: int
+monto: float
+
+tiempo= 1
+interes=2/100
+
+capital= int(input('Ingrese el capital a invertir(S/.): '))
+
+interes= capital*tiempo*interes
+monto= capital+interes
+
+print(f'El interés ganado es (S/.): {interes:.2f}')
+print(f'El monto final es(S/.): {monto:.2f}')

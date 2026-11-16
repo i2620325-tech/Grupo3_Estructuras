@@ -1,0 +1,15 @@
+#EJERCICIO 8
+#Considerando que la figura es un trapecio
+
+A_basemayor: float
+C_basemenor: float
+B_altura: float
+area: float
+
+A_basemayor= float(input('Ingrese el valor de la base mayor (cm): '))
+C_basemenor= float(input('Ingrese el valor de la base menor (cm): '))
+B_altura= float(input('Ingrese el valor de la altura (cm): '))
+
+area= (A_basemayor+C_basemenor)*B_altura/2
+
+print(f'El área del trapecio es: {area:.2f} cm2')

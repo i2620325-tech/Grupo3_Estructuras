@@ -1,0 +1,20 @@
+#EJERCICIO 6
+
+edad: int
+meses:int
+semanas: int
+dias: int
+horas: int
+
+edad = int(input("Ingrese su edad en años: "))
+
+meses = edad * 12
+semanas = edad * 52
+dias = edad * 365
+horas = dias * 24
+
+print(f'Edad: {edad} años')
+print(f'Meses vividos: {meses}')
+print(f'Semanas vividas: {semanas}')
+print(f'Dias vividos: {dias}')
+print(f'Horas vividas: {horas}')

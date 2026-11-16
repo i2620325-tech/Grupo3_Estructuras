@@ -1,0 +1,45 @@
+# 1. Ingreso de datos
+n = int(input("Ingrese la cantidad de números (N): "))
+numeros = []
+
+for i in range(n):
+    num = float(input(f"Ingrese el número {i + 1}: "))
+    numeros.append(num)
+
+x = float(input("Ingrese el número de referencia (X): "))
+
+# 2. Inicialización de contadores
+menores = 0
+mayores = 0
+iguales = 0
+entre_1_y_x = 0
+ninguna = 0
+
+# 3. Evaluación de condiciones
+for num in numeros:
+    c1 = num < x
+    c2 = num > x
+    c3 = num == x
+    c4 = 1 <= num <= x
+
+    if c1:
+        menores += 1
+    if c2:
+        mayores += 1
+    if c3:
+        iguales += 1
+    if c4:
+        entre_1_y_x += 1
+    if not (c1 or c2 or c3 or c4):
+        ninguna += 1
+
+# 4. Cálculo y muestra de resultados
+if n > 0:
+    print(f"\nResultados para X = {x}:")
+    print(f"• Menores que {x}: {(menores / n) * 100:.2f}%")
+    print(f"• Mayores que {x}: {(mayores / n) * 100:.2f}%")
+    print(f"• Iguales a {x}: {(iguales / n) * 100:.2f}%")
+    print(f"• Comprendidos entre 1 y {x}: {(entre_1_y_x / n) * 100:.2f}%")
+    print(f"• No cumple ninguna condición: {(ninguna / n) * 100:.2f}%")
+else:
+    print("La cantidad N debe ser mayor a 0.")

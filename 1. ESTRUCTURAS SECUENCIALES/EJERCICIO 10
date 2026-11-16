@@ -1,0 +1,24 @@
+# 1. Definir las denominaciones disponibles
+denominaciones = [200, 100, 50, 20, 10, 5, 1]
+
+# 2. Entrada de datos
+monto = int(input("Ingrese la cantidad de dinero a retirar: "))
+
+if monto > 0:
+    restante = monto
+    total_piezas = 0
+    print(f"\nDesglose para retirar S/ {monto}:")
+
+    # 3. Calcular billetes y monedas de mayor a menor
+    for valor in denominaciones:
+        cantidad = restante // valor
+        restante = restante % valor
+
+        if cantidad > 0:
+            total_piezas += cantidad
+            tipo = "billete(s)" if valor >= 10 else "moneda(s)"
+            print(f"• {cantidad} {tipo} de S/ {valor}")
+
+    print(f"\nTotal de billetes/monedas entregados: {total_piezas}")
+else:
+    print("Error: El monto a retirar debe ser mayor a 0.")

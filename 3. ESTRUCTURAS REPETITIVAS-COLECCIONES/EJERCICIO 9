@@ -1,0 +1,18 @@
+#EJERCICIO 09
+
+numeros: list = []
+producto: int = 1
+i: int = 100
+
+# GENERAR ARRAY
+while i >= 2:
+    numeros.append(i)
+    i = i - 2
+
+# CALCULAR PRODUCTO
+while i < len(numeros):
+    producto = producto * numeros[i]
+    i = i + 1
+
+print(f'Numeros del array: {numeros}')
+print(f'Producto total: {producto}')

@@ -1,0 +1,47 @@
+#EJERCICIO 01
+#Calcular la suma y promedio de los números pares e impares por separado, de 1 hasta N.
+
+# DECLARACIÓN DE VARIABLES
+n: int
+suma_pares: int
+suma_impares: int
+contador_pares: int
+contador_impares: int
+promedio_pares: float
+promedio_impares: float
+
+# ENTRADA DE DATOS
+n = 0
+suma_pares = 0
+suma_impares = 0
+contador_pares = 0
+contador_impares = 0
+promedio_pares = 0
+promedio_impares = 0
+
+n = int(input("Ingrese el valor de N: "))
+
+# PROCESO
+for i in range(1, n + 1):
+    if i % 2 == 0:
+        suma_pares = suma_pares + i
+        contador_pares = contador_pares + 1
+    else:
+        suma_impares = suma_impares + i
+        contador_impares = contador_impares + 1
+
+# PROMEDIOS
+if contador_pares>0:
+    promedio_pares = suma_pares / contador_pares
+else:
+    promedio_pares = 0
+if contador_impares>0:
+    promedio_impares = suma_impares / contador_impares
+else:
+    promedio_impares = 0
+
+# SALIDA DE DATOS
+print(f'Suma de pares: {suma_pares}')
+print(f'Promedio de pares: {promedio_pares:.2F}')
+print(f'Suma de impares: {suma_impares}')
+print(f'Promedio de impares: {promedio_impares:.2F}')

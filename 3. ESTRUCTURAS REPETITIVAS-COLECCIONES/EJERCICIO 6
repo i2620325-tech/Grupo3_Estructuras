@@ -1,0 +1,11 @@
+import time
+
+try:
+    for h in range(24):
+        for m in range(60):
+            for s in range(60):
+                # \r regresa el cursor al inicio de la línea para actualizar la hora
+                print(f"\rCronómetro: {h:02d}:{m:02d}:{s:02d}", end="")
+                time.sleep(1)  # Pausa referencial de 1 segundo
+except KeyboardInterrupt:
+    print("\nCronómetro detenido.")

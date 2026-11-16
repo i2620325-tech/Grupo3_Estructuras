@@ -1,0 +1,17 @@
+# Datos del problema
+v0_kmh = 0.0        # Velocidad inicial en km/h
+aceleracion = 0.8   # Aceleración en m/s^2
+tiempo = 30.0       # Tiempo en segundos
+
+# 1. Convertir velocidad inicial de km/h a m/s
+v0_ms = v0_kmh / 3.6
+
+# 2. Calcular velocidad final en m/s
+vf_ms = v0_ms + (aceleracion * tiempo)
+
+# 3. Convertir el resultado final a km/h
+vf_kmh = vf_ms * 3.6
+
+# Mostrar resultados
+print(f"Velocidad final: {vf_ms:.2f} m/s")
+print(f"Velocidad final: {vf_kmh:.2f} km/h")

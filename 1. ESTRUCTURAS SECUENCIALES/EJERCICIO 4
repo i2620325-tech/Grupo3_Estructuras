@@ -1,0 +1,15 @@
+#EJERCICIO 4
+
+sueldobase: float
+comision: float
+suelfof: float
+
+comision=25/100
+
+sueldobase=float(input('Ingrese su sueldo base (S/.):'))
+
+comision=sueldobase*comision
+sueldof=sueldobase+comision
+
+print(f'Su comisión es de (S/.): {comision:.2f}')
+print(f'Su sueldo final es de (S/.): {sueldof:.2f}')
